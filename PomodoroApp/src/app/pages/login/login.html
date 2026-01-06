@@ -1,0 +1,28 @@
+<div class="login-container">
+  <h2>Willkommen beim Pomodoro Timer</h2>
+  
+  <form (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        [(ngModel)]="email" 
+        required
+        placeholder="beispiel@schule.ch">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Passwort</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        [(ngModel)]="password" 
+        required>
+    </div>
+
+    <button type="submit">Einloggen</button>
+  </form>
+</div>
