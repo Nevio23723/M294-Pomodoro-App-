@@ -1,0 +1,184 @@
+.dashboard-page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+}
+
+.dashboard-header {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-icon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.brand h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.logout-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.dashboard-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+}
+
+.welcome-section p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.timer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.timer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.timer-card:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-light);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 0.125rem;
+}
+
+.card-content .duration {
+    font-size: 0.875rem;
+    color: var(--primary-light);
+    margin: 0 0 0.25rem;
+    font-weight: 500;
+}
+
+.card-content .description {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.card-arrow {
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.card-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.timer-card:hover .card-arrow {
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+    .dashboard-main {
+        padding: 2rem 1rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5rem;
+    }
+}

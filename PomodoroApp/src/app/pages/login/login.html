@@ -1,28 +1,41 @@
-<div class="login-container">
-  <h2>Willkommen beim Pomodoro Timer</h2>
-  
-  <form (ngSubmit)="onLogin()">
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        [(ngModel)]="email" 
-        required
-        placeholder="beispiel@schule.ch">
+<div class="login-page">
+  <div class="login-container">
+    <div class="login-header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+      </div>
+      <h1>Pomodoro</h1>
+      <p>Fokussiert arbeiten</p>
     </div>
 
-    <div class="form-group">
-      <label for="password">Passwort</label>
-      <input 
-        type="password" 
-        id="password" 
-        name="password" 
-        [(ngModel)]="password" 
-        required>
-    </div>
+    <form (ngSubmit)="onLogin()" class="login-form">
+      @if (error) {
+      <div class="error-message">{{ error }}</div>
+      }
 
-    <button type="submit">Einloggen</button>
-  </form>
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required placeholder="name@beispiel.ch"
+          autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Passwort</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required placeholder="••••••••"
+          autocomplete="current-password">
+      </div>
+
+      <button type="submit" class="login-btn">
+        <span>Anmelden</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </form>
+
+    <p class="hint">Demo: Beliebige Anmeldedaten verwenden</p>
+  </div>
 </div>
