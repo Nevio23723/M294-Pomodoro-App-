@@ -44,4 +44,8 @@ export class Dashboard {
     logout() {
         this.authService.logout();
     }
+
+    openExcuseGenerator() {
+        this.router.navigate(['/excuse']);
+    }
 }

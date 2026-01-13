@@ -17,5 +17,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/timer/timer').then(m => m.Timer),
         canActivate: [authGuard]
     },
+    {
+        path: 'excuse',
+        loadComponent: () => import('./pages/excuse/excuse.component').then(m => m.ExcuseComponent),
+        canActivate: [authGuard]
+    },
     { path: '**', redirectTo: '/login' }
 ];

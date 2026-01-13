@@ -173,6 +173,76 @@
     transform: translateX(4px);
 }
 
+/* Extras Section - Abwesenheits-Assistent */
+.extras-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.excuse-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.excuse-btn:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+.excuse-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.excuse-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-light);
+}
+
+.excuse-content {
+    flex: 1;
+}
+
+.excuse-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 0.125rem;
+}
+
+.excuse-content p {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.excuse-btn .card-arrow {
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.excuse-btn:hover .card-arrow {
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
 @media (max-width: 600px) {
     .dashboard-main {
         padding: 2rem 1rem;
