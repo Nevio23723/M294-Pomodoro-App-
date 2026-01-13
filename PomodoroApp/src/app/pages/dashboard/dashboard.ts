@@ -15,7 +15,7 @@ export class Dashboard {
 
     timerOptions = [
         {
-            duration: 15,
+            duration: 10,
             title: 'Kurze Session',
             description: 'Perfekt für kleine Aufgaben',
             icon: '⚡',
